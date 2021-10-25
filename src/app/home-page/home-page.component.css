@@ -1,0 +1,36 @@
+.maindiv{
+    display: flex;
+}
+
+.colstyle{
+    display:flex;
+    margin-top: 20px;
+}
+.hstyle{
+    color: white; 
+    margin-left:40px ; 
+    padding-top: 10px;
+}
+
+.imgdiv{
+    width:100%;
+}
+.imgstyle{
+    height: 100px;
+    width:130px;
+    padding-left:30px;
+}
+.divstyle{
+    margin-left: 30px;
+    margin-top: 20px;
+    border: 2px solid;
+    background-color: darkblue;
+    height: 40px;
+    width:150px;
+    text-align: center;
+    padding-top: 20px;
+}
+.astyle{
+    text-decoration: none;
+    color: white;
+}

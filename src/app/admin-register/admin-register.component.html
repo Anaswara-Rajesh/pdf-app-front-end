@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="imgdiv">
+        <img src="/assets/pdfimg.jpg" class="imgstyle">
+        <h1 class="hstyle">File Storage Application</h1>
+        </div>
+    
+    <div class="login-div">
+        <div class="row">
+            <div class="col" style=" background-color: white; border: 2px solid black;;">
+                
+                <h2 style="color: rgb(66, 85, 85);" class="h2style">Admin Register</h2>
+                <form [formGroup]="aregisterForm" (ngSubmit)="aregister()">
+                <div class="input-group mb-3">
+                    
+                    <input type="text" class="form-control" name="adminid" id="adminid" formControlName="adminid" placeholder="Admin ID"
+                        aria-label="Recipient's adminid" aria-describedby="basic-addon2">
+                        
+                </div>
+                <div *ngIf="(this.aregisterForm.get('adminid')?.touched || this.aregisterForm.get('adminid')?.dirty)&& this.aregisterForm.get('adminid')?.errors" class="error">invalid admin id</div><br>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="adminname" id="adminname" formControlName="adminname"  placeholder="Admin Name"
+                        aria-label="adminname" aria-describedby="basic-addon2">
+                </div>
+                <div *ngIf="(this.aregisterForm.get('adminname')?.touched||this.aregisterForm.get('adminname')?.dirty)&& this.aregisterForm.get('adminname')?.errors" class="error">invalid Username</div><br>
+                <div class="input-group mb-3">
+                    <input type="password" class="form-control" name="pswd" id="pwd" formControlName="pswd"  placeholder="password"
+                        aria-label="password" aria-describedby="basic-addon2">
+                </div>
+                <div *ngIf="(this.aregisterForm.get('pswd')?.touched || this.aregisterForm.get('pswd')?.dirty)&& this.aregisterForm.get('pswd')?.errors" class="error">invalid password</div><br>
+                <div class="input-group mb-3">
+                    <p style="color: red;" id="error"></p>
+                </div>
+                <div class="input-group mb-3 login-btn-center">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+            </form>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+</div>

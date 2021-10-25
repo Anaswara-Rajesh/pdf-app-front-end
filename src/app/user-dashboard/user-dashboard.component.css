@@ -1,0 +1,53 @@
+.astyle{
+    text-decoration: none;
+    color:black;
+}
+.row{
+    padding-top: 5px;
+    padding-left: 30px;
+}
+.colstyle{
+    display:flex;
+}
+.error{
+    color: red;
+}
+.first{
+    background-color:darkcyan;
+    border: 2px solid;
+    height:30px;
+    width:130px;
+    text-align: center;
+    padding-top:15px;
+}
+.second{
+    background-color: darkcyan;
+    border: 2px solid;
+    height:30px;
+    width:130px;
+    text-align: center;
+    padding-top:15px;
+    margin-left:20px;
+}
+.third{
+    background-color: darkcyan;
+    border: 2px solid;
+    height:30px;
+    width:130px;
+    text-align: center;
+    padding-top:15px;
+    margin-left:20px;
+}
+.four{
+    background-color: darkcyan;
+    border: 2px solid;
+    height:30px;
+    width:130px;
+    text-align: center;
+    padding-top:15px;
+    margin-left:20px;
+}
+.tablestyle{
+    margin-top:40px;
+
+}

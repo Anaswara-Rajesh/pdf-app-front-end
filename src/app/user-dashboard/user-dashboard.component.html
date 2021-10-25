@@ -1,0 +1,57 @@
+<html>
+
+<body>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <h1 style="color:white"> File Upload Page</h1>
+    <!-- Header section -->
+    <header class="header-section">
+        <div class="container">
+            <div class="row">
+                <div class="colstyle">
+
+                    <div class="first"> <a class="astyle" routerLink="/udashboard">Home</a></div><br>
+
+                    <div class="second"> <a class="astyle" routerLink="/getPdf">Uploads</a></div><br>
+
+                    <div class="third"> <a class="astyle" routerLink="/dwnloads">Downloads</a></div><br>
+
+                    <div class="four"> <a class="astyle" routerLink=''>Logout</a></div><br>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="row">
+        <div class="tablestyle"><br>
+            <form [formGroup]="uploadForm" (ngSubmit)="upload()">
+                <div><label style="color:red;">User Id : <input type="text" class="form-control" name="userid"
+                            id="userid" formControlName="userid" placeholder="User Id"></label></div><br>
+
+                <div *ngIf="(this.uploadForm.get('userid')?.touched || this.uploadForm.get('userid')?.dirty)&& this.uploadForm.get('userid')?.errors"
+                    class="error">invalid User id</div><br>
+
+                <div><label style="color:red;">Password : <input type="password" class="form-control" name="pswd"
+                            id="pswd" formControlName="pswd" placeholder="Password"></label></div><br>
+
+                <div *ngIf="(this.uploadForm.get('pswd')?.touched || this.uploadForm.get('pswd')?.dirty)&& this.uploadForm.get('pswd')?.errors"
+                    class="error">invalid password</div><br>
+
+
+                <div><label style="color:red;">File Name : <input type="text" class="form-control" name="filename"
+                            id="filename" formControlName="filename" placeholder="file name"></label></div><br>
+
+                <div *ngIf="(this.uploadForm.get('filename')?.touched || this.uploadForm.get('filename')?.dirty)&& this.uploadForm.get('filename')?.errors"
+                    class="error">invalid file name</div><br>
+
+                <div><label style="color:red;">Choose File : <input type="file"  data-size="lg" class="form-control" name="file" ngf-pattern="'.df,.ppt,.docx'" ngf-accept="'.pdf,.ppt,.docx'"
+                            id="file" formControlName="file" placeholder="Choose"></label></div><br>
+
+                 <div *ngIf="(this.uploadForm.get('file')?.touched || this.uploadForm.get('file')?.dirty)&& this.uploadForm.get('file')?.errors" -->
+                        class="error">invalid file</div><br>
+
+
+                    <div>
+                        <button type="submit" class="btn btn-primary">Upload</button>
+                    </div>
+            </form>
+        </div>
+    </div>

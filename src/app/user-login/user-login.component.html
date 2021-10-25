@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="imgdiv">
+        <div class="colstyle">
+        <div class="row">
+        <img src="/assets/pdfimg.jpg" class="imgstyle"></div>
+        <div><h1 class="hstyle">File Storage Application</h1></div>
+    </div>
+    </div><br><br>
+    <div class="login-div">
+        <div class="row">
+            <div class="col" style=" background-color: white; border: 2px solid black;;">
+                <h2 style="color: rgb(66, 85, 85);" class="h2style">User Login</h2>
+                <form [formGroup]="uloginForm" (ngSubmit)="ulogin()">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="userid" id="userid" formControlName="userid"
+                            placeholder="User Id" aria-label="Recipient's userid"
+                            aria-describedby="basic-addon2">
+                    </div>
+                    <div *ngIf="(this.uloginForm.get('userid')?.touched || this.uloginForm.get('userid')?.dirty)&& this.uloginForm.get('userid')?.errors"
+                        class="error">invalid User ID</div><br>
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control" name="pswd" id="pwd" formControlName="pswd"
+                            placeholder="password" aria-label="password" aria-describedby="basic-addon2">
+                    </div>
+                    <div *ngIf="(this.uloginForm.get('pswd')?.touched || this.uloginForm.get('pswd')?.dirty)&& this.uloginForm.get('pswd')?.errors"
+                        class="error">invalid password</div><br>
+                    <div class="input-group mb-3">
+                        <p style="color: red;" id="error"></p>
+                    </div>
+                    <div class="input-group mb-3 login-btn-center">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                        <a routerLink="/uregister">Sign UP</a>
+                    </div>
+                </form>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+</div>
